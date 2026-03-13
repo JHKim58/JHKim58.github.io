@@ -6,204 +6,220 @@
   <title>Environmental Epigenome Dynamics Lab | Junghyun Kim</title>
   <meta name="description" content="Environmental Epigenome Dynamics Lab at NIE, NTU Singapore. Research in plant epigenetics, chromatin architecture, and environmental genome regulation." />
   <style>
-  :root {
-    /* 'Olive Garden Feast' 팔레트 적용 */
-    --bg: #F3E9DC;           /* 바탕: 따뜻하고 부드러운 베이지 */
-    --card: #FFFFFF;         /* 카드: 깨끗한 흰색 */
-    --text: #354F52;         /* 텍스트: 깊고 차분한 다크 올리브 */
-    --muted: #84A98C;        /* 부연 설명: 부드러운 그린 그레이 */
-    --accent: #588157;       /* 메인 강조: 활기찬 올리브 그린 */
-    --accent-2: #A67C52;     /* 포인트: 따뜻한 어스 브라운 */
-    --hover-gold: #E09F3E;   /* 호버 포인트: 활기찬 골드 */
-    --border: #DBCBB2;       /* 경계선: 은은한 샌드 컬러 */
-    --max: 1100px;
-  }
+  :root {     /* 'Olive Garden Feast' 팔레트 적용 */     
+    --bg: #F3E9DC;           /* 바탕: 따뜻하고 부드러운 베이지 */    
+    --card: #FFFFFF;         /* 카드: 깨끗한 흰색 */     
+    --text: #354F52;         /* 텍스트: 깊고 차분한 다크 올리브 */     
+    --muted: #84A98C;        /* 부연 설명: 부드러운 그린 그레이 */     
+    --accent: #588157;       /* 메인 강조: 활기찬 올리브 그린 */     
+    --accent-2: #A67C52;     /* 포인트: 따뜻한 어스 브라운 */ 
+    --hover-gold: #E09F3E; /* 호버 포인트: 활기찬 골드 */     
+    --border: #DBCBB2;       /* 경계선: 은은한 샌드 컬러 */     
+    --max: 1100px;   }
 
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-  a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-  }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-  a:hover { 
-    color: var(--hover-gold);
-    text-decoration: underline; 
-  }
+    a:hover { text-decoration: underline; }
 
-  .container {
-    width: min(var(--max), calc(100% - 2rem));
-    margin: 0 auto;
-  }
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
 
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(15px);
-    background: rgba(243, 233, 220, 0.92); /* 배경색에 맞춘 반투명 */
-    border-bottom: 2px solid var(--accent); /* 헤더 아래에 올리브 선 추가 */
-  }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(247, 250, 248, 0.9);
+      border-bottom: 1px solid var(--border);
+    }
 
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 0;
-  }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 0;
+      gap: 1rem;
+    }
 
-  .brand {
-    font-weight: 800;
-    font-size: 1.2rem;
-    color: var(--text);
-    line-height: 1.2;
-  }
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
 
-  .brand small {
-    display: block;
-    font-weight: 600;
-    color: var(--accent);
-    font-size: 0.85rem;
-    margin-top: 2px;
-  }
+    .brand small {
+      display: block;
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
 
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    padding: 0;
-    margin: 0;
-  }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
-  nav a {
-    color: var(--text);
-    font-size: 0.95rem;
-  }
+    .hero {
+      padding: 5rem 0 4rem;
+      background: linear-gradient(180deg, #eef6f2 0%, var(--bg) 100%);
+    }
 
-  nav a:hover {
-    color: var(--accent);
-  }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 2rem;
+      align-items: center;
+    }
 
-  /* 히어로 섹션에 올리브 그라데이션 추가 */
-  .hero {
-    padding: 6rem 0 5rem;
-    background: linear-gradient(135deg, #E6F0E9 0%, #F3E9DC 100%);
-    border-bottom: 1px solid var(--border);
-  }
+    h1, h2, h3 { line-height: 1.15; margin-top: 0; }
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      margin-bottom: 1rem;
+    }
 
-  h1 {
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    color: var(--text);
-    font-weight: 800;
-    letter-spacing: -1px;
-  }
+    h2 {
+      font-size: clamp(1.4rem, 2vw, 2rem);
+      margin-bottom: 0.8rem;
+    }
 
-  .lead {
-    font-size: 1.15rem;
-    color: var(--muted);
-    margin-bottom: 2rem;
-  }
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 60ch;
+    }
 
-  .hero-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-top: 5px solid var(--accent-2); /* 카드 상단에 브라운 포인트 */
-    border-radius: 20px;
-    padding: 1.8rem;
-    box-shadow: 0 15px 35px rgba(53, 79, 82, 0.08);
-  }
+    .hero-card, .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.3rem;
+      box-shadow: 0 8px 24px rgba(28, 57, 48, 0.05);
+    }
 
-  .button {
-    padding: 0.9rem 1.8rem;
-    border-radius: 12px;
-    font-weight: 700;
-    transition: 0.3s;
-  }
+    .button-row {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 1.4rem;
+    }
 
-  .button.primary {
-    background: var(--accent);
-    color: white;
-    box-shadow: 0 4px 15px rgba(88, 129, 87, 0.3);
-  }
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      font-weight: 600;
+    }
 
-  .button.primary:hover {
-    background: var(--text);
-    transform: translateY(-2px);
-  }
+    .button.primary {
+      background: var(--accent);
+      color: white;
+    }
 
-  /* 섹션 제목 디자인 강화 */
-  h2 {
-    font-size: 2.2rem;
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+    main section {
+      padding: 3.8rem 0;
+    }
 
-  h2::before {
-    content: "";
-    width: 8px;
-    height: 35px;
-    background: var(--accent-2); /* 브라운 포인트 */
-    display: inline-block;
-    border-radius: 4px;
-  }
+    .section-intro {
+      max-width: 70ch;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
 
-  /* 카드 디자인 강화 */
-  .card {
-    border: 1px solid var(--border);
-    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
 
-  .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    border-color: var(--accent);
-  }
+    .research-list {
+      display: grid;
+      gap: 1rem;
+    }
 
-  .card h3 {
-    color: var(--accent);
-    font-size: 1.3rem;
-    font-weight: 700;
-  }
+    .research-item h3,
+    .person h3,
+    .news-item h3 {
+      margin-bottom: 0.4rem;
+      font-size: 1.08rem;
+    }
 
-  .muted { color: var(--muted); }
+    .muted { color: var(--muted); }
 
-  /* 푸터 색상 강화 */
-  footer {
-    background: #354F52; /* 다크 올리브 배경 */
-    color: #F3E9DC;     /* 베이지 텍스트 */
-    padding: 4rem 0;
-    margin-top: 4rem;
-  }
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
 
-  footer p { margin: 0.5rem 0; }
-  
-  code.inline {
-    background: #E6F0E9;
-    border-radius: 8px;
-    padding: 0.15rem 0.4rem;
-    font-size: 0.92rem;
-    color: var(--accent);
-  }
+    .person {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1rem;
+    }
 
-  @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .lead { margin: 0 auto 2rem; }
-    .nav { flex-direction: column; gap: 1.5rem; }
-    nav ul { justify-content: center; }
-    }
-</style>
+    .news-list {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .news-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1rem;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    code.inline {
+      background: #edf4f1;
+      border-radius: 8px;
+      padding: 0.15rem 0.4rem;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid-2,
+      .people-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav ul {
+        justify-content: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
